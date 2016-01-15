@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://dl.bintray.com/aliaksandr-budnikau/itchannel")
+        }
+    }
+}
+
+dependencies {
+    compile 'org.hibernate:hibernate-entitymanager:4.1.7.Final'
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+}
+
